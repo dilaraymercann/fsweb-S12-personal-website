@@ -68,8 +68,8 @@ const Header = () => {
                 <div className='max-w-6xl mx-auto flex items-center gap-40'>
                     <div className='max-w-xl flex flex-col gap-10'>
                         <div className='flex flex-col gap-2'>
-                            <p className='font-[Montserrat] text-xl'>Hi! 👋</p>
-                            <p className="relative text-[#0A0A14] font-[Montserrat] text-3xl leading-snug">
+                            <p className='font-[Inter] text-xl'>Hi! 👋</p>
+                            <p className="relative text-[#0A0A14] font-[Inter] text-3xl leading-snug">
 
                                 <span className="relative z-10">
                                     I’m Dilaray. I’m a full-stack developer. I can craft solid and scalable frontend products. Let’s meet!
@@ -89,7 +89,7 @@ const Header = () => {
                                 </button>
                             </div>
                             <div>
-                                <p className='font-[Montserrat] text-sm'>Currently <span className='text-[#E92577]'>Freelancing</span> for <span className='text-[#E92577]'>UX, UI, & Web Design</span> Project .
+                                <p className='font-[Inter] text-sm'>Currently <span className='text-[#E92577]'>Freelancing</span> for <span className='text-[#E92577]'>UX, UI, & Web Design</span> Project .
                                     Invite me to join your team -{'>'} <span className='text-[#E92577]'>pratamaiosi@gmail.com</span></p>
                             </div>
                         </div>

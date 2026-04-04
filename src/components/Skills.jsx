@@ -10,9 +10,9 @@ const Skills = () => {
 
     return (
         <>
-            <div className="relative text-center text-4xl mt-10 text-[#0A0A14] font-[Montserrat]">
+            <div className="min-h-[50vh] relative text-center text-4xl mt-10 text-[#0A0A14] font-[Inter] overflow-hidden">
                 <div
-                    className="absolute top-60 -left-16 w-48 h-12 bg-[#525252] rounded-full"
+                    className="absolute bottom-12 -left-16 w-48 h-12 bg-[#525252] rounded-full"
                 ></div>
                 <h1>Skills</h1>
                 <div className="flex justify-center gap-8 flex-wrap mt-15">
@@ -21,7 +21,7 @@ const Skills = () => {
                             <div className="w-20 h-20 overflow-hidden flex items-center justify-center">
                                 <img src={skill.icon} className="w-20 h-20 object-cover" />
                             </div>
-                            <p className="font-[Montserrat] text-xs text-[#777777]">{skill.name}</p>
+                            <p className="font-[Inter] text-xs text-[#777777]">{skill.name}</p>
                         </div>
                     ))}
                 </div>
