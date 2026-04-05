@@ -10,9 +10,10 @@ const Profile = () => {
         { label: 'Tercih Ettiği Rol', value: 'Frontend, UI' },
     ];
     return (
-        <div className="min-h-[70vh] relative text-center text-3xl mt-10 text-[#000000] font-[Montserrat] overflow-hidden">
-            <h1>Profile</h1>
-            <div className='flex gap-16 justify-center mt-20 flex-wrap'>
+        <div className="min-h-[70vh] relative text-center text-3xl mt-10 text-[#000000] font-[Montserrat] overflow-hidden bg-[#F4F4F4]">
+            <div class="absolute w-30.25 h-30.25 rounded-full border-18 border-[#EA2678] bg-transparent -right-10 top-0"></div>
+            <h1 className='mt-10'>Profile</h1>
+            <div className='flex gap-16 justify-center mt-15 flex-wrap'>
                 <div className="relative w-[320px]">
                     <div className="absolute -bottom-2 -right-2 w-full h-full bg-[#8F8F8F] rounded-2xl"></div>
                     <Card sx={{ minWidth: 320, borderRadius: 4, boxShadow: 3, position: 'relative' }}>
@@ -37,8 +38,11 @@ const Profile = () => {
                         </CardContent>
                     </Card>
                 </div>
-                <div className='w-[30%] text-left flex flex-col justify-center gap-4'>
-                    <p className='font-[Playfair_Display] text-xl '>About Me</p>
+                <div className='relative w-[30%] text-left flex flex-col justify-center gap-4'>
+                    <div
+                        className="absolute top-20 -left-5 w-20 h-5 bg-[#82BBFF] rounded-lg"
+                    ></div>
+                    <p className='relative font-[Playfair_Display] text-xl '>About Me</p>
                     <p className='font-[Inter] text-sm'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia.</p>
                     <p className='font-[Inter] text-sm'>Mnima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam! </p>
                 </div>
