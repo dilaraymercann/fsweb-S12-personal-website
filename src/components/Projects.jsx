@@ -12,7 +12,7 @@ const Projects = () => {
     return (
         <div className="min-h-[70vh] text-center text-3xl mt-10 text-[#000000] font-[Montserrat] mb-20 ">
             <h1>Projects</h1>
-            <div className="flex gap-4 justify-center mt-20 flex-wrap h-[80vh]">
+            <div className="flex gap-10 justify-center mt-20 flex-wrap h-[80vh]">
                 <Card sx={{
                     backgroundColor: '#DDEEFE', width: 400, position: 'relative', overflow: 'visible'
                 }}>
