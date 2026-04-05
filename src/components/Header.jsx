@@ -1,6 +1,7 @@
 import { styled } from '@mui/material/styles';
 import Switch from '@mui/material/Switch';
 import FormControlLabel from '@mui/material/FormControlLabel';
+import { useDarkMode } from '../contexts/DarkModeContext';
 
 const PinkSwitch = styled(Switch)(({ theme }) => ({
     width: 42,
@@ -24,8 +25,7 @@ const PinkSwitch = styled(Switch)(({ theme }) => ({
     '& .MuiSwitch-thumb': {
         width: 20,
         height: 20,
-        boxShadow: '0 2px 4px rgba(0,0,0,0.2)',
-        color: '#FFE86E'
+        boxShadow: '0 2px 4px rgba(0,0,0,0.2)'
     },
 
     //Switch arka zemin
@@ -37,9 +37,11 @@ const PinkSwitch = styled(Switch)(({ theme }) => ({
 }));
 
 const Header = () => {
+    const { darkMode, setDarkMode } = useDarkMode();
+
     return (
-        <div className="relative min-h-[80vh] bg-[#F4F4F4] overflow-hidden">
-            <div className="absolute top-0 left-[35%] -translate-x-[60%] w-30 h-15 bg-[#D9D9D9] rounded-b-full"></div>
+        <div className={`relative min-h-[80vh] ${darkMode ? 'bg-[#2A262B]' : 'bg-[#F4F4F4]'} overflow-hidden`}>
+            <div className={`absolute top-0 left-[35%] -translate-x-[60%] w-30 h-15 ${darkMode ? 'bg-[#525252]' : 'bg-[#D9D9D9]'} rounded-b-full`}></div>
             <div
                 className="absolute top-96 -right-16 w-48 h-12 bg-[#EA2678] rounded-full"
             ></div>
@@ -47,29 +49,53 @@ const Header = () => {
                 <FormControlLabel
                     control={
                         <PinkSwitch
-                            defaultChecked
+                            checked={darkMode}
+                            onChange={(e) => setDarkMode(e.target.checked)}
+                            checkedIcon={
+                                <span style={{
+                                    width: 20,
+                                    height: 20,
+                                    borderRadius: '50%',
+                                    backgroundColor: '#FFE86E',
+                                    display: 'block',
+                                    boxShadow: 'inset -8px -1px 0 0 #2A262B',
+                                }} />
+                            }
+                            icon={
+                                <span style={{
+                                    width: 20,
+                                    height: 20,
+                                    borderRadius: '50%',
+                                    backgroundColor: '#FFE86E',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    fontSize: 13,
+                                }}>☀️</span>
+                            }
                             sx={{ transform: "scale(0.8)", transformOrigin: "left" }}
                         />
                     }
-                    label="DARK MODE"
+                    label={`${darkMode ? 'LIGHT MODE' : 'DARK MODE'}`}
                     sx={{
                         marginRight: 0,
                         '& .MuiFormControlLabel-label': {
                             fontSize: '12px',
-                            color: '#777777',
+                            fontFamily: 'Inter, sans-serif',
+                            color: `${darkMode ? 'white' : '#777777'}`,
                         },
                     }}
                 />
                 <span className="text-[#777777] mx-2">|</span>
-                <span className="text-xs text-[#777777]"><span className='text-[#E92577]'>TÜRKÇE</span>'YE GEÇ</span>
+                <span className="text-xs text-[#777777] font-[Inter]"><span className='text-[#E92577]'>TÜRKÇE</span>'YE GEÇ</span>
 
             </div>
             <section className="w-full px-20 py-16">
                 <div className='max-w-6xl mx-auto flex items-center gap-40'>
                     <div className='max-w-xl flex flex-col gap-10'>
                         <div className='flex flex-col gap-2'>
-                            <p className='font-[Inter] text-xl'>Hi! 👋</p>
-                            <p className="relative text-[#0A0A14] font-[Inter] text-3xl leading-snug">
+                            <p className={`font-[Inter] text-xl ${darkMode ? 'text-white' : 'text-[#0A0A14]'}`}>Hi! 👋</p>
+                            <p className={`relative ${darkMode ? 'text-white' : 'text-[#0A0A14]'} font-[Inter] text-3xl leading-snug`}>
 
                                 <span className="relative z-10">
                                     I’m Dilaray. I’m a full-stack developer. I can craft solid and scalable frontend products. Let’s meet!
@@ -80,7 +106,7 @@ const Header = () => {
                             </p>
                         </div>
                         <div className='flex flex-col gap-4'>
-                            <div className='flex gap-2 text-2xl'>
+                            <div className={`flex gap-2 text-2xl ${darkMode ? 'text-white' : 'text-[#0A0A14]'}`}>
                                 <button>
                                     <i className="fa-brands fa-linkedin-in"></i>
                                 </button>
@@ -89,7 +115,7 @@ const Header = () => {
                                 </button>
                             </div>
                             <div>
-                                <p className='font-[Inter] text-sm'>Currently <span className='text-[#E92577]'>Freelancing</span> for <span className='text-[#E92577]'>UX, UI, & Web Design</span> Project .
+                                <p className={`font-[Inter] text-sm ${darkMode ? 'text-white' : 'text-[#0A0A14]'}`}>Currently <span className='text-[#E92577]'>Freelancing</span> for <span className='text-[#E92577]'>UX, UI, & Web Design</span> Project .
                                     Invite me to join your team -{'>'} <span className='text-[#E92577]'>pratamaiosi@gmail.com</span></p>
                             </div>
                         </div>
@@ -98,8 +124,8 @@ const Header = () => {
                         <img src="./public/personal.png" className="w-70"></img>
                     </div>
                 </div>
-            </section>
-        </div>
+            </section >
+        </div >
 
     );
 };
