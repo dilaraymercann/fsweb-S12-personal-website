@@ -14,6 +14,7 @@ export const LanguageProvider = ({ children }) => {
     const profileTranslations = translations.profile[language];
     const projectsTranslations = translations.projects[language];
     const footerTranslations = translations.footer[language];
+    const messageTranslations = translations.message[language];
 
 
     const toggleLanguage = () => {
@@ -23,7 +24,7 @@ export const LanguageProvider = ({ children }) => {
     };
 
     return (
-        <LanguageContext.Provider value={{ language, toggleLanguage, headerTranslations, skillTranslations, profileTranslations, projectsTranslations, footerTranslations }}>
+        <LanguageContext.Provider value={{ language, toggleLanguage, headerTranslations, skillTranslations, profileTranslations, projectsTranslations, footerTranslations, messageTranslations }}>
             {children}
         </LanguageContext.Provider>
     );

@@ -8,13 +8,14 @@ import CloseIcon from '@mui/icons-material/Close';
 import Button from '@mui/material/Button';
 import { useMessage } from '../contexts/MessageContext';
 import { useForm } from 'react-hook-form';
-import { useEffect } from 'react';
 import usePostRequest from '../hooks/usePostRequest';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Message = () => {
     const { handleSend, open, setOpen } = useMessage();
     const { loading, error, postData } = usePostRequest('https://reqres.in/api/workintech');
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
+    const { messageTranslations } = useLanguage();
 
     const onSubmit = (data) => {
         postData(data, () => {
@@ -26,11 +27,11 @@ const Message = () => {
     return (
         <Dialog open={open} onClose={() => setOpen(false)}>
             <DialogTitle sx={{ fontFamily: 'Inter', fontSize: 16 }}>
-                Mesaj Gönder
+                {messageTranslations.title}
             </DialogTitle>
             <DialogContent sx={{ display: 'flex', flexDirection: 'column', gap: 2, minWidth: 500 }}>
                 <TextField
-                    label="Adınız"
+                    label={messageTranslations.name}
                     size="small"
                     fullWidth
                     sx={{ mt: 1 }}
@@ -39,7 +40,7 @@ const Message = () => {
                     helperText={errors.name?.message}
                 />
                 <TextField
-                    label="E-posta"
+                    label={messageTranslations.email}
                     size="small"
                     fullWidth
                     {...register('email', {
@@ -50,7 +51,7 @@ const Message = () => {
                     helperText={errors.email?.message}
                 />
                 <TextField
-                    label="Mesajınız"
+                    label={messageTranslations.message}
                     multiline
                     rows={4}
                     fullWidth
@@ -65,7 +66,7 @@ const Message = () => {
                     startIcon={<CloseIcon />}
                     sx={{ color: '#777777', fontFamily: 'Inter', '&:hover': { backgroundColor: 'transparent' } }}
                 >
-                    Kapat
+                    {messageTranslations.close}
                 </Button>
                 <Button
                     variant="contained"
@@ -73,7 +74,7 @@ const Message = () => {
                     onClick={handleSubmit(onSubmit)}
                     sx={{ backgroundColor: '#E92577', fontFamily: 'Inter', '&:hover': { backgroundColor: '#c41e66' } }}
                 >
-                    {loading ? 'Gönderiliyor...' : 'Gönder'}
+                    {loading ? messageTranslations.sending : messageTranslations.send}
                 </Button>
             </DialogActions>
         </Dialog>
