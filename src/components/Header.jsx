@@ -3,6 +3,10 @@ import Switch from '@mui/material/Switch';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import { useDarkMode } from '../contexts/DarkModeContext';
 import { useLanguage } from '../contexts/LanguageContext';
+import { useMessage } from '../contexts/MessageContext';
+import Message from './Message';
+import IconButton from '@mui/material/IconButton';
+import EmailIcon from '@mui/icons-material/Email';
 
 const PinkSwitch = styled(Switch)(({ theme }) => ({
     width: 42,
@@ -40,6 +44,7 @@ const PinkSwitch = styled(Switch)(({ theme }) => ({
 const Header = () => {
     const { darkMode, setDarkMode } = useDarkMode();
     const { headerTranslations, toggleLanguage } = useLanguage();
+    const { open, setOpen } = useMessage();
 
     return (
         <div className={`relative min-h-[80vh] ${darkMode ? 'bg-[#2A262B]' : 'bg-[#F4F4F4]'} overflow-hidden`}>
@@ -48,6 +53,10 @@ const Header = () => {
                 className="absolute top-96 -right-16 w-48 h-12 bg-[#EA2678] rounded-full"
             ></div>
             <div className="flex justify-end items-center gap-4 pr-10 pt-4">
+                <IconButton onClick={() => setOpen(true)} sx={{ color: '#E92577' }}>
+                    <EmailIcon />
+                </IconButton>
+                <span className="text-[#777777] mx-2">|</span>
                 <FormControlLabel
                     control={
                         <PinkSwitch
@@ -90,7 +99,7 @@ const Header = () => {
                 />
                 <span className="text-[#777777] mx-2">|</span>
                 <span className="text-xs text-[#777777] font-[Inter]"><span onClick={toggleLanguage} className='text-[#E92577] cursor-pointer'>{headerTranslations.language}</span>'YE GEÇ</span>
-
+                <Message />
             </div>
             <section className="w-full px-20 py-16">
                 <div className='max-w-6xl mx-auto flex items-center gap-40'>

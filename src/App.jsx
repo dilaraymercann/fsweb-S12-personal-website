@@ -7,18 +7,23 @@ import Projects from "./components/Projects";
 import Footer from './components/Footer';
 import { DarkModeProvider } from './contexts/DarkModeContext';
 import { LanguageProvider } from './contexts/LanguageContext';
+import { MessageProvider } from './contexts/MessageContext';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <DarkModeProvider>
       <LanguageProvider>
-        <Header />
-        <Skills />
-        <Profile />
-        <Projects />
-        <Footer />
+        <MessageProvider>
+          <Header />
+          <Skills />
+          <Profile />
+          <Projects />
+          <Footer />
+          <ToastContainer position="top-right" />
+        </MessageProvider>
       </LanguageProvider>
     </DarkModeProvider>
   )

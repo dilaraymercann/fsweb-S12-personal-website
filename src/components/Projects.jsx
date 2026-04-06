@@ -36,18 +36,20 @@ const Projects = () => {
 
                     </CardContent>
                     <CardActions sx={{ justifyContent: 'space-around' }}>
-                        <Button size="small" sx={{
-                            color: darkMode ? 'white' : '#000', fontFamily: 'Inter', '&:hover': {
-                                transform: 'scale(1.1)',
-                                backgroundColor: 'transparent',
-                            }
-                        }} >{projectsTranslations.viewGithub}</Button>
-                        <Button size="small" sx={{
-                            color: darkMode ? 'white' : '#000', fontFamily: 'Inter', '&:hover': {
-                                transform: 'scale(1.1)',
-                                backgroundColor: 'transparent',
-                            }
-                        }} endIcon={<ArrowForwardIcon sx={{ color: darkMode ? 'white' : '#000' }} />}> {projectsTranslations.goToApp}</Button>
+                        <Button size="small" href="https://github.com/dilaraymercann/fsweb-s4-bonus-challenge-html-pizza"
+                            target="_blank" sx={{
+                                color: darkMode ? 'white' : '#000', fontFamily: 'Inter', '&:hover': {
+                                    transform: 'scale(1.1)',
+                                    backgroundColor: 'transparent',
+                                }
+                            }} >{projectsTranslations.viewGithub}</Button>
+                        <Button size="small" href="https://fsweb-s10g3-redux-watchlist-solutio-eight-mu.vercel.app/"
+                            target="_blank" sx={{
+                                color: darkMode ? 'white' : '#000', fontFamily: 'Inter', '&:hover': {
+                                    transform: 'scale(1.1)',
+                                    backgroundColor: 'transparent',
+                                }
+                            }} endIcon={<ArrowForwardIcon sx={{ color: darkMode ? 'white' : '#000' }} />}> {projectsTranslations.goToApp}</Button>
                     </CardActions>
                     <CardMedia
                         component="img"
@@ -55,7 +57,7 @@ const Projects = () => {
                         sx={{
                             width: '100%',
 
-                            marginTop: '5.5rem',
+                            marginTop: '4.3rem',
                             position: 'absolute',
                         }}
                     />
@@ -65,7 +67,7 @@ const Projects = () => {
                         sx={{
                             width: '18rem',
                             height: '11.1rem',
-                            marginTop: '6.1rem',
+                            marginTop: '4.9rem',
                             position: 'absolute',
                             left: '50%',
                             transform: 'translateX(-50%)',
@@ -88,13 +90,13 @@ const Projects = () => {
                         ))}
                     </CardContent>
                     <CardActions sx={{ justifyContent: 'space-around' }}>
-                        <Button size="small" sx={{
+                        <Button size="small" href="https://github.com/dilaraymercann/fsweb-s8-challenge-pizza" target="_blank" sx={{
                             color: darkMode ? 'white' : '#000', fontFamily: 'Inter', '&:hover': {
                                 transform: 'scale(1.1)',
                                 backgroundColor: 'transparent',
                             }
                         }} >{projectsTranslations.viewGithub}</Button>
-                        <Button size="small" sx={{
+                        <Button size="small" href="https://fsweb-s10g2-redux-filmler-solution-sepia.vercel.app/movies" target="_blank" sx={{
                             color: darkMode ? 'white' : '#000', fontFamily: 'Inter', '&:hover': {
                                 transform: 'scale(1.1)',
                                 backgroundColor: 'transparent',
