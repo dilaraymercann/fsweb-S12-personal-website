@@ -6,25 +6,27 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { useDarkMode } from '../contexts/DarkModeContext';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Projects = () => {
-    const { darkMode, setDarkMode } = useDarkMode();
+    const { darkMode } = useDarkMode();
+    const { projectsTranslations } = useLanguage();
 
-    const project1techs = ["react", "vercel", "axios", "router"];
-    const project2techs = ["react", "redux", "axios", "router", "vercel"];
+    const project1techs = projectsTranslations.project1techs;
+    const project2techs = projectsTranslations.project2techs;
     return (
         <div className={`min-h-[70vh] text-center text-3xl text-[#000000] font-[Montserrat] pb-20 ${darkMode ? 'bg-[#484148]' : 'bg-white'}`}>
-            <h1 className={`pt-10 ${darkMode ? 'text-white' : 'text-[#0A0A14]'}`}>Projects</h1>
+            <h1 className={`pt-10 ${darkMode ? 'text-white' : 'text-[#0A0A14]'}`}>{projectsTranslations.projects}</h1>
             <div className="flex gap-10 justify-center mt-20 flex-wrap h-[80vh]">
                 <Card sx={{
                     backgroundColor: darkMode ? '#2D3235' : '#DDEEFE', width: 400, position: 'relative', overflow: 'visible'
                 }}>
                     <CardContent sx={{ padding: '24px' }}>
                         <Typography variant="h5" component="div" sx={{ fontFamily: 'Playfair Display', color: darkMode ? 'white' : '#0A0A14' }}>
-                            Random Jokes
+                            {projectsTranslations.project1.label}
                         </Typography>
                         <Typography variant="body2" sx={{ fontFamily: 'Inter', marginTop: '2rem', color: darkMode ? 'white' : '#0A0A14' }}>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia.
+                            {projectsTranslations.project1.value}
                         </Typography>
                         {project1techs.map((tech) => (
                             <Typography key={tech} variant="caption" sx={{ fontFamily: 'Fairplay Display', fontWeight: 'bold', marginTop: '1rem', display: 'inline-block', marginRight: '0.5rem', padding: '0.25rem 0.5rem', backgroundColor: darkMode ? '#525252' : '#fff', color: darkMode ? 'white' : '#000', borderRadius: '0.8rem', width: '20%' }}>
@@ -39,13 +41,13 @@ const Projects = () => {
                                 transform: 'scale(1.1)',
                                 backgroundColor: 'transparent',
                             }
-                        }} >View on Github</Button>
+                        }} >{projectsTranslations.viewGithub}</Button>
                         <Button size="small" sx={{
                             color: darkMode ? 'white' : '#000', fontFamily: 'Inter', '&:hover': {
                                 transform: 'scale(1.1)',
                                 backgroundColor: 'transparent',
                             }
-                        }} endIcon={<ArrowForwardIcon sx={{ color: darkMode ? 'white' : '#000' }} />}>Go to App</Button>
+                        }} endIcon={<ArrowForwardIcon sx={{ color: darkMode ? 'white' : '#000' }} />}> {projectsTranslations.goToApp}</Button>
                     </CardActions>
                     <CardMedia
                         component="img"
@@ -74,10 +76,10 @@ const Projects = () => {
                 <Card sx={{ backgroundColor: darkMode ? '#495351' : '#D9F6F1', width: 400, position: 'relative', overflow: 'visible' }}>
                     <CardContent sx={{ padding: '24px' }}>
                         <Typography variant="h5" component="div" sx={{ fontFamily: 'Playfair Display', color: darkMode ? 'white' : '#0A0A14' }}>
-                            Are you bored?
+                            {projectsTranslations.project2.label}
                         </Typography>
                         <Typography variant="body2" sx={{ fontFamily: 'Inter', marginTop: '2rem', color: darkMode ? 'white' : '#0A0A14' }}>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia minima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!
+                            {projectsTranslations.project2.value}
                         </Typography>
                         {project2techs.map((tech) => (
                             <Typography key={tech} variant="caption" sx={{ fontFamily: 'Fairplay Display', fontWeight: 'bold', marginTop: '1rem', display: 'inline-block', marginRight: '0.5rem', padding: '0.25rem 0.5rem', backgroundColor: darkMode ? '#525252' : '#fff', color: darkMode ? 'white' : '#000', borderRadius: '0.8rem', width: '20%' }}>
@@ -91,7 +93,7 @@ const Projects = () => {
                                 transform: 'scale(1.1)',
                                 backgroundColor: 'transparent',
                             }
-                        }} >View on Github</Button>
+                        }} >{projectsTranslations.viewGithub}</Button>
                         <Button size="small" sx={{
                             color: darkMode ? 'white' : '#000', fontFamily: 'Inter', '&:hover': {
                                 transform: 'scale(1.1)',
@@ -100,7 +102,7 @@ const Projects = () => {
                                 transform: 'scale(1.1)',
                                 backgroundColor: 'transparent',
                             }
-                        }} endIcon={<ArrowForwardIcon sx={{ color: darkMode ? 'white' : '#000' }} />}>Go to App</Button>
+                        }} endIcon={<ArrowForwardIcon sx={{ color: darkMode ? 'white' : '#000' }} />}> {projectsTranslations.goToApp}</Button>
                     </CardActions>
                     <CardMedia
                         component="img"

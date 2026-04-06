@@ -1,0 +1,188 @@
+{
+    "header": {
+        "tr": {
+            "greeting": "Merhaba! 👋",
+            "description": "Ben Dilaray. Full-stack geliştiriciyim. Sağlam ve ölçeklenebilir frontend ürünler oluşturabilirim. Tanışalım!",
+            "current": "Şu an",
+            "freelance": "Freelance çalışıyorum",
+            "invite": "Ekibine davet et",
+            "design": "UX, UI, & Web Tasarımı",
+            "for": "için",
+            "project": "Proje",
+            "darkMode": "KARANLIK MOD",
+            "lightMode": "AYDINLIK MOD",
+            "language": "ENGLISH"
+        },
+        "en": {
+            "greeting": "Hi! 👋",
+            "description": "I'm Dilaray. I'm a full-stack developer. I can craft solid and scalable frontend products. Let's meet!",
+            "current": "Currently",
+            "freelance": "Freelancing",
+            "for": "for",
+            "invite": "Invite me to join your team",
+            "design": "UX, UI, & Web Design",
+            "project": "Project",
+            "darkMode": "DARK MODE",
+            "lightMode": "LIGHT MODE",
+            "language": "TÜRKÇE"
+        }
+    },
+    "skills": {
+        "tr": {
+            "title": "Yetenekler"
+        },
+        "en": {
+            "title": "Skills"
+        },
+        "common": {
+            "list": [
+                {
+                    "name": "JAVASCRIPT",
+                    "icon": "./public/icons/javascript.png"
+                },
+                {
+                    "name": "REACT",
+                    "icon": "./public/icons/react.png"
+                },
+                {
+                    "name": "REDUX",
+                    "icon": "./public/icons/redux.webp"
+                },
+                {
+                    "name": "NODE",
+                    "icon": "./public/icons/nodejs.jpg"
+                },
+                {
+                    "name": "VS CODE",
+                    "icon": "./public/icons/vscode.png"
+                },
+                {
+                    "name": "FIGMA",
+                    "icon": "./public/icons/figma.jpg"
+                }
+            ]
+        }
+    },
+    "profile": {
+        "tr": {
+            "title": "Profil",
+            "information": "Temel Bilgiler",
+            "aboutme": "Hakkımda",
+            "paragraph1": "2021 yılından beri yazılım geliştirme alanında çalışıyorum. Frontend odaklı olmakla birlikte, backend ve UI tasarım konularında da deneyim sahibiyim.",
+            "paragraph2": "Çeşitli sektörlerde, farklı ölçeklerde projelerde yer aldım. Takım çalışmasına önem veririm ve sürekli öğrenmeye açığım.",
+            "profile": [
+                {
+                    "label": "Doğum tarihi",
+                    "value": "24.03.1996"
+                },
+                {
+                    "label": "İkamet Şehri",
+                    "value": "Ankara"
+                },
+                {
+                    "label": "Eğitim Durumu",
+                    "value": "Çukurova Ünv. Bilgisayar Mühendisliği Lisans, 2021"
+                },
+                {
+                    "label": "Tercih Ettiği Rol",
+                    "value": "Frontend, UI"
+                }
+            ]
+        },
+        "en": {
+            "title": "Profile",
+            "information": "Basic Information",
+            "aboutme": "About Me",
+            "paragraph1": "I have been working in software development since 2021. While I am frontend-focused, I also have experience in backend and UI design.",
+            "paragraph2": "I have been involved in projects of various scales across different industries. I value teamwork and am always eager to learn.",
+            "profile": [
+                {
+                    "label": "Birth Date",
+                    "value": "24.03.1996"
+                },
+                {
+                    "label": "City of Residence",
+                    "value": "Ankara"
+                },
+                {
+                    "label": "Education",
+                    "value": "Çukurova Unv. Computer Engineering License, 2021"
+                },
+                {
+                    "label": "Preferred Role",
+                    "value": "Frontend, UI"
+                }
+            ]
+        }
+    },
+    "projects": {
+        "tr": {
+            "projects": "Projeler",
+            "project1": {
+                "label": "Pizza Projesi",
+                "value": "Bu proje, kullanıcıların çeşitli pizza türlerini keşfedebileceği ve sipariş verebileceği bir uygulamadır. React kullanılarak geliştirilmiş olup, kullanıcı dostu bir arayüz sunar."
+            },
+            "project2": {
+                "label": "Hava Durumu Uygulaması",
+                "value": "Bu uygulama, kullanıcıların güncel hava durumunu kontrol etmelerini sağlar. React ve Redux kullanılarak geliştirilmiş olup, kullanıcıların şehir bazında hava durumunu görüntülemelerine olanak tanır."
+            },
+            "project1techs": [
+                "html",
+                "css",
+                "axios",
+                "figma"
+            ],
+            "project2techs": [
+                "react",
+                "redux",
+                "axios",
+                "router",
+                "vercel"
+            ],
+            "viewGithub": "GITHUB'DA GÖR",
+            "goToApp": "UYGULAMAYA GİT"
+        },
+        "en": {
+            "projects": "Projects",
+            "project1": {
+                "label": "Pizza Project",
+                "value": "This project allows users to explore various pizza types and place orders. Built with React, it provides a user-friendly interface."
+            },
+            "project2": {
+                "label": "Weather App",
+                "value": "This app allows users to check the current weather conditions. Built with React and Redux, it enables users to view weather information by city."
+            },
+            "project1techs": [
+                "react",
+                "css",
+                "axios",
+                "figma"
+            ],
+            "project2techs": [
+                "react",
+                "redux",
+                "axios",
+                "router",
+                "vercel"
+            ],
+            "viewGithub": "VIEW ON GITHUB",
+            "goToApp": "GO TO APP"
+        }
+    },
+    "footer": {
+        "tr": {
+            "title": "Bir sonraki ürününüzde birlikte çalışalım.",
+            "github": "Github",
+            "blog": "Kişisel Blog",
+            "linkedin": "Linkedin",
+            "email": "Email"
+        },
+        "en": {
+            "title": "Let's work together on your next product.",
+            "github": "Github",
+            "blog": "Personal Blog",
+            "linkedin": "Linkedin",
+            "email": "Email"
+        }
+    }
+}
