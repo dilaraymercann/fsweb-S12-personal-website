@@ -6,14 +6,14 @@ import { useLanguage } from '../contexts/LanguageContext';
 
 const Profile = () => {
     const { darkMode } = useDarkMode();
-    const { profileTranslations } = useLanguage();
+    const { profileTranslations, language } = useLanguage();
     const { profile } = profileTranslations;
 
     return (
-        <div className={`min-h-[70vh] relative text-center text-3xl text-[#000000] font-[Montserrat] ${darkMode ? 'bg-[#2A262B]' : 'bg-[#F4F4F4]'}`}>
-            <div className={`absolute w-30.25 h-30.25 rounded-full border-18 border-[#EA2678] bg-transparent -right-10 -top-10 overflow-visible`}></div>
-            <h1 className={`pt-10 ${darkMode ? 'text-white' : 'text-[#0A0A14]'}`}>{profileTranslations.title}</h1>
-            <div className='flex gap-16 justify-center mt-15 flex-wrap pb-20'>
+        <div className={`min-h-[70vh] relative text-center text-xl md:text-3xl text-[#000000] font-[Montserrat] ${darkMode ? 'bg-[#2A262B]' : 'bg-[#F4F4F4]'}`}>
+            <div className={`absolute w-25 h-25 md:w-30.25 md:h-30.25 rounded-full border-10 md:border-18 border-[#EA2678] bg-transparent -right-10 -top-10 overflow-visible`}></div>
+            <h1 className={`pt-5 md:pt-10 ${darkMode ? 'text-white' : 'text-[#0A0A14]'}`}>{profileTranslations.title}</h1>
+            <div className='flex gap-16 justify-center mt-10 md:mt-15 flex-wrap pb-20'>
                 <div className="relative w-[320px]">
                     <div className={`absolute -bottom-2 -right-2 w-full h-full ${darkMode ? 'bg-[#52525280]' : 'bg-[#8F8F8F]'} rounded-2xl`}></div>
                     <Card sx={{ minWidth: 320, borderRadius: 4, boxShadow: 3, position: 'relative', backgroundColor: darkMode ? '#525252' : '#ffffff' }}>
@@ -38,9 +38,9 @@ const Profile = () => {
                         </CardContent>
                     </Card>
                 </div>
-                <div className='relative w-[30%] text-left flex flex-col justify-center gap-4'>
+                <div className='relative w-[70%] md:w-[30%] text-left flex flex-col justify-center gap-4'>
                     <div
-                        className="absolute top-20 -left-5 w-20 h-5 bg-[#82BBFF] rounded-lg"
+                        className={`absolute ${language === 'tr' ? 'top-4 md:top-20' : 'top-4 md:top-17'} -left-5 w-20 h-5 bg-[#82BBFF] rounded-lg`}
                     ></div>
                     <p className={`relative font-[Playfair_Display] text-xl ${darkMode ? 'text-white' : '#0A0A14'}`}>{profileTranslations.aboutme}</p>
                     <p className={`font-[Inter] text-sm ${darkMode ? 'text-white' : '#0A0A14'}`}>{profileTranslations.paragraph1}</p>

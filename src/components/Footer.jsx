@@ -3,15 +3,15 @@ import { useLanguage } from '../contexts/LanguageContext';
 
 const Footer = () => {
     const { darkMode } = useDarkMode();
-    const { footerTranslations } = useLanguage();
+    const { footerTranslations, language } = useLanguage();
     return (
         <footer >
-            <div className={`relative flex gap-15 justify-center pt-10 min-h-[30vh] font-[Inter] text-[#0A0A14] ${darkMode ? 'bg-[#484148]' : 'bg-white'}`}>
+            <div className={`relative flex flex-col md:flex-row gap-5 md:gap-15 items-center justify-center md:pt-10 min-h-[40vh] md:min-h-[40vh] font-[Inter] text-[#0A0A14] ${darkMode ? 'bg-[#484148]' : 'bg-white'}`}>
                 <div
-                    className="absolute top-17 mr-35 w-50 h-4 bg-[#82BBFF] rounded-md"
+                    className="absolute top-17 md:top-35 mr-15 md:mr-35 w-33 md:w-50 h-3 md:h-4 bg-[#82BBFF] rounded-md"
                 ></div>
-                <div className="relative max-w-sm">
-                    <p className={`text-4xl ${darkMode ? 'text-white' : 'text-[#0A0A14]'}`}>{footerTranslations.title}</p>
+                <div className={`relative text-center md:max-w-sm ${language === 'tr' ? 'w-80' : 'w-auto'}`}>
+                    <p className={`text-xl md:text-4xl ${darkMode ? 'text-white' : 'text-[#0A0A14]'}`}>{footerTranslations.title}</p>
                 </div>
                 <div>
                     <ul>

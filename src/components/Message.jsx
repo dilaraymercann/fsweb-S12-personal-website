@@ -25,16 +25,22 @@ const Message = () => {
     };
 
     return (
-        <Dialog open={open} onClose={() => setOpen(false)}>
-            <DialogTitle sx={{ fontFamily: 'Inter', fontSize: 16 }}>
+        <Dialog
+            open={open}
+            onClose={() => setOpen(false)}
+            fullWidth
+            maxWidth="sm"
+        >
+            <DialogTitle sx={{ fontFamily: 'Inter', fontSize: { xs: 14, md: 16 } }}>
                 {messageTranslations.title}
             </DialogTitle>
-            <DialogContent sx={{ display: 'flex', flexDirection: 'column', gap: 2, minWidth: 500 }}>
+            <DialogContent sx={{ display: 'flex', flexDirection: 'column', gap: 2, minWidth: { xs: 'auto', md: 500 } }}>
                 <TextField
                     label={messageTranslations.name}
                     size="small"
                     fullWidth
                     sx={{ mt: 1 }}
+                    InputLabelProps={{ style: { fontSize: '0.8rem' } }}
                     {...register('name', { required: 'Ad zorunludur' })}
                     error={!!errors.name}
                     helperText={errors.name?.message}
@@ -43,6 +49,7 @@ const Message = () => {
                     label={messageTranslations.email}
                     size="small"
                     fullWidth
+                    InputLabelProps={{ style: { fontSize: '0.8rem' } }}
                     {...register('email', {
                         required: 'E-posta zorunludur',
                         pattern: { value: /^\S+@\S+$/i, message: 'Geçerli bir e-posta girin' }
@@ -55,6 +62,7 @@ const Message = () => {
                     multiline
                     rows={4}
                     fullWidth
+                    InputLabelProps={{ style: { fontSize: '0.8rem' } }}
                     {...register('message', { required: 'Mesaj zorunludur' })}
                     error={!!errors.message}
                     helperText={errors.message?.message}
@@ -64,7 +72,7 @@ const Message = () => {
                 <Button
                     onClick={() => { setOpen(false); setTimeout(() => reset(), 300); }}
                     startIcon={<CloseIcon />}
-                    sx={{ color: '#777777', fontFamily: 'Inter', '&:hover': { backgroundColor: 'transparent' } }}
+                    sx={{ color: '#777777', fontFamily: 'Inter', fontSize: { xs: '0.7rem', md: '0.875rem' }, '&:hover': { backgroundColor: 'transparent' } }}
                 >
                     {messageTranslations.close}
                 </Button>
@@ -72,7 +80,7 @@ const Message = () => {
                     variant="contained"
                     endIcon={<SendIcon />}
                     onClick={handleSubmit(onSubmit)}
-                    sx={{ backgroundColor: '#E92577', fontFamily: 'Inter', '&:hover': { backgroundColor: '#c41e66' } }}
+                    sx={{ backgroundColor: '#E92577', fontFamily: 'Inter', fontSize: { xs: '0.7rem', md: '0.875rem' }, '&:hover': { backgroundColor: '#c41e66' } }}
                 >
                     {loading ? messageTranslations.sending : messageTranslations.send}
                 </Button>

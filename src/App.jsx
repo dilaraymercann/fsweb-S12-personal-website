@@ -14,18 +14,20 @@ import 'react-toastify/dist/ReactToastify.css';
 function App() {
 
   return (
-    <DarkModeProvider>
-      <LanguageProvider>
-        <MessageProvider>
-          <Header />
-          <Skills />
-          <Profile />
-          <Projects />
-          <Footer />
-          <ToastContainer position="top-right" />
-        </MessageProvider>
-      </LanguageProvider>
-    </DarkModeProvider>
+    <div className="overflow-x-hidden">
+      <DarkModeProvider>
+        <LanguageProvider>
+          <MessageProvider>
+            <Header />
+            <Skills />
+            <Profile />
+            <Projects />
+            <Footer />
+            <ToastContainer position="top-right" />
+          </MessageProvider>
+        </LanguageProvider>
+      </DarkModeProvider>
+    </div>
   )
 }
 
