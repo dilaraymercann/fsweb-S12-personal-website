@@ -38,27 +38,27 @@
             "list": [
                 {
                     "name": "JAVASCRIPT",
-                    "icon": "./public/icons/javascript.png"
+                    "icon": "/icons/javascript.png"
                 },
                 {
                     "name": "REACT",
-                    "icon": "./public/icons/react.png"
+                    "icon": "/icons/react.png"
                 },
                 {
                     "name": "REDUX",
-                    "icon": "./public/icons/redux.webp"
+                    "icon": "/icons/redux.webp"
                 },
                 {
                     "name": "NODE",
-                    "icon": "./public/icons/nodejs.jpg"
+                    "icon": "/icons/nodejs.jpg"
                 },
                 {
                     "name": "VS CODE",
-                    "icon": "./public/icons/vscode.png"
+                    "icon": "/icons/vscode.png"
                 },
                 {
                     "name": "FIGMA",
-                    "icon": "./public/icons/figma.jpg"
+                    "icon": "/icons/figma.jpg"
                 }
             ]
         }

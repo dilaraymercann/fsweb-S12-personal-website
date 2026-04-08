@@ -78,7 +78,7 @@ const Projects = () => {
                     </CardActions>
                     <CardMedia
                         component="img"
-                        image="../public/projects/desktop.png"
+                        image="/projects/desktop.png"
                         sx={{
                             width: '100%',
                             marginTop: { xs: `${language === 'tr' ? '1rem' : '1rem'}`, md: `${language === 'tr' ? '4.3rem' : '3.8rem'}` },
@@ -87,7 +87,7 @@ const Projects = () => {
                     />
                     <CardMedia
                         component="img"
-                        image="../public/projects/desktopContent1.png"
+                        image="/projects/desktopContent1.png"
                         sx={{
                             width: { xs: '11rem', md: '18rem' },
                             height: { xs: '6.9rem', md: '11.1rem' },
@@ -135,7 +135,7 @@ const Projects = () => {
                     </CardActions>
                     <CardMedia
                         component="img"
-                        image="../public/projects/desktop.png"
+                        image="/projects/desktop.png"
                         sx={{
                             width: '100%',
                             marginTop: { xs: language === 'tr' ? '0.1rem' : '1rem', md: language === 'tr' ? '0.4rem' : '1.1rem' },
@@ -144,7 +144,7 @@ const Projects = () => {
                     />
                     <CardMedia
                         component="img"
-                        image="../public/projects/desktopContent2.png"
+                        image="/projects/desktopContent2.png"
                         sx={{
                             width: { xs: '11rem', md: '18rem' },
                             height: { xs: '6.8rem', md: '11.1rem' },
