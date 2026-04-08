@@ -1,5 +1,5 @@
 import { renderHook, act } from '@testing-library/react'
-import usePostRequest from '../hooks/usePostRequest'
+import usePostRequest from './usePostRequest'
 import { vi } from 'vitest'
 import axios from 'axios'
 import { toast } from 'react-toastify'
