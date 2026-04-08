@@ -135,7 +135,7 @@ const Header = () => {
                         </div>
                     </div>
                     <div className="hidden md:flex justify-center">
-                        <img src="./public/personal.png" className="w-70" />
+                        <img src="/personal.png" className="w-70" />
                     </div>
 
                 </div>
