@@ -1,16 +1,158 @@
-# React + Vite
+# 🚀 Personal Website (React + Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a modern personal portfolio website built with **React, Vite, and TailwindCSS**, featuring dynamic UI interactions, multi-language support, dark mode, and a fully tested architecture.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
 
-## React Compiler
+### 🌙 Dark Mode
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* Toggle between light and dark themes
+* Preference is saved in `localStorage`
+* Fully reactive UI update
 
-## Expanding the ESLint configuration
+### 🌍 Multi-language Support
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* English 🇬🇧 / Turkish 🇹🇷 toggle
+* Dynamic text rendering via context
+* Language preference stored in `localStorage`
+
+### 💬 Contact Form
+
+* Form validation (required fields)
+* API integration using Axios
+* Success & error notifications via **React Toastify**
+* Messages stored in `localStorage`
+
+### 📜 Message History
+
+* Displays previously sent messages
+* Time formatting with `date-fns`
+* Modal-based UI (MUI Dialog)
+
+---
+
+## 🧠 Architecture
+
+The project follows a **clean and scalable structure**:
+
+```
+src/
+  components/
+  contexts/
+  hooks/
+  data/
+```
+
+### 📦 Context API Usage
+
+* `DarkModeContext` → theme management
+* `LanguageContext` → translations
+* `MessageContext` → form & message state
+
+### 🔗 Custom Hook
+
+* `usePostRequest`
+
+  * Handles API requests
+  * Manages loading & error states
+  * Triggers toast notifications
+
+---
+
+## 🧪 Testing
+
+The project includes **unit and integration tests** using:
+
+* Vitest
+* React Testing Library
+
+### ✔ Tested Areas
+
+* Form validation
+* API calls (mocked)
+* Toast notifications
+* LocalStorage interactions
+* Context state updates
+* UI interactions (dark mode & language toggle)
+
+### ▶ Run Tests
+
+```
+npm run test        # watch mode
+npm run test:run    # run all tests once
+```
+
+---
+
+## ⚙️ Tech Stack
+
+* ⚛️ React
+* ⚡ Vite
+* 🎨 Tailwind CSS
+* 🧩 Material UI (MUI)
+* 🌐 Axios
+* 🔔 React Toastify
+* 📅 date-fns
+* 🧪 Vitest + Testing Library
+
+---
+
+## 📸 Screens
+
+* Dark / Light mode toggle
+* Multi-language UI
+* Contact form modal
+* Message history modal
+
+---
+
+## 🚀 Getting Started
+
+### 1. Install dependencies
+
+```
+npm install
+```
+
+### 2. Run the project
+
+```
+npm run dev
+```
+
+### 3. Build for production
+
+```
+npm run build
+```
+
+---
+
+## 🔐 Environment Variables
+
+Create a `.env` file:
+
+```
+VITE_API_KEY=your_api_key_here
+```
+
+---
+
+## 📌 Notes
+
+* State persistence via `localStorage`
+* Fully component-based architecture
+* Testable and scalable structure
+
+---
+
+## 👤 Author
+
+**Dilaray**
+
+Full Stack Developer
+React • UI/UX • Scalable Frontend Architecture
+
+---
