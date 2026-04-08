@@ -193,7 +193,8 @@
             "message": "Mesajınız",
             "close": "Kapat",
             "sending": "Gönderiliyor...",
-            "send": "Gönder"
+            "send": "Gönder",
+            "previous": "Önceki Mesajlarım"
         },
         "en": {
             "title": "Send a Message",
@@ -202,7 +203,8 @@
             "message": "Your Message",
             "close": "Close",
             "sending": "Sending...",
-            "send": "Send"
+            "send": "Send",
+            "previous": "My Previous Messages"
         }
     }
 }
