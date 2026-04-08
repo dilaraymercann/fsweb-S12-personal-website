@@ -15,10 +15,10 @@ const Footer = () => {
                 </div>
                 <div>
                     <ul>
-                        <li><a href="https://github.com" className="text-[#1769FF]">{footerTranslations.github}</a></li>
-                        <li><a href="https://linkedin.com" className={` ${darkMode ? 'text-white' : 'text-[#0A0A14]'}`}>{footerTranslations.blog}</a></li>
-                        <li><a href="https://twitter.com" className="text-[#0077B5]">{footerTranslations.linkedin}</a></li>
-                        <li><a href="https://twitter.com" className="text-[#AF0C48]">{footerTranslations.email}</a></li>
+                        <li><a href="https://github.com" target="_blank" className="text-[#1769FF]">{footerTranslations.github}</a></li>
+                        <li><a href="https://myportfolio-six-kappa-39.vercel.app/" target="_blank" className={` ${darkMode ? 'text-white' : 'text-[#0A0A14]'}`}>{footerTranslations.blog}</a></li>
+                        <li><a href="https://linkedin.com" target="_blank" className="text-[#0077B5]">{footerTranslations.linkedin}</a></li>
+                        <li><a href="https://mail.google.com/" target="_blank" className="text-[#AF0C48]">{footerTranslations.email}</a></li>
                     </ul>
                 </div>
             </div>
