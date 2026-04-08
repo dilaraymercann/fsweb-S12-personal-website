@@ -115,7 +115,7 @@ const Header = () => {
                             </p>
                         </div>
                         <div className="w-full flex justify-center md:hidden">
-                            <img src="./personal.png" className="w-40" />
+                            <img src="/personal.png" className="w-40" />
                         </div>
 
                         <div className='flex flex-col gap-4'>
